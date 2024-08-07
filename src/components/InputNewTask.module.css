@@ -1,0 +1,48 @@
+.inputNewTask {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -1.6875rem;
+}
+
+.inputNewTask>input {
+    width: 39.875rem;
+    height: 3.375rem;
+    border-radius: 8px;
+    background: var(--gray-500);
+    border: 1px solid var(--gray-700);
+    color: var(--white);
+    font-size: 1rem;
+    padding: 1rem;
+    margin: 0 0.5rem;
+}
+
+.inputNewTask>button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.375rem;
+    width: 5.625rem;
+    background: var(--blue-dark);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.1s;
+    margin: 0 0.5rem;
+    padding: 0.5rem;
+}
+
+.inputNewTask>button:hover {
+    background: var(--blue);
+}
+
+.inputNewTask>button strong {
+    margin: 0 0.5rem;
+    color: var(--white);
+    font-size: 87.5%;
+}
+
+.inputNewTask button:disabled {
+    background: var(--purple-dark);
+    cursor: not-allowed;
+}

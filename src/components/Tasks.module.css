@@ -1,0 +1,174 @@
+.tasks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.tasks header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0;
+    font-size: 87.5%;
+    width: 45rem;
+}
+
+.tasks header .countTasks {}
+
+.tasks header .countTasks>strong {
+    margin: 0.5rem;
+    color: var(--blue);
+}
+
+.tasks header .countCompletedTasks {}
+
+.tasks header .countCompletedTasks>strong {
+    margin: 0.5rem;
+    color: var(--purple);
+}
+
+.tasks header span {
+    background: var(--gray-400);
+    color: var(--gray-200);
+    width: 2rem;
+    height: 1.3rem;
+    padding: 0.125rem 0.5rem;
+    border-radius: 12px;
+    font-size: .75rem;
+    font-weight: bold;
+}
+
+.emptyContent {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    height: 14rem;
+    width: 45rem;
+}
+
+.iconTask {
+    margin: 1rem;
+}
+
+.tasks main {
+    margin-top: 1rem;
+    border-top: 1px solid var(--gray-400);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contentTask {
+    display: flex;
+    background: var(--gray-700);
+    border-radius: 8px;
+    padding: 1rem;
+    width: 40rem;
+    margin: 0;
+
+}
+
+.contentTask+.contentTask {
+    margin-top: 1rem;
+}
+
+.customCheckbox {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1.5;
+    user-select: none;
+}
+
+.customCheckbox>input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--blue);
+    border-radius: 50%;
+    background-color: transparent;
+    transform: translateY(-50%);
+}
+
+.customCheckbox input:checked+.checkmark {
+    background-color: var(--purple);
+    border: 2px solid var(--purple);
+}
+
+.checkmark:after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+.customCheckbox input:checked+.checkmark:after {
+    display: block;
+    left: 6px;
+    top: 4px;
+    width: 3px;
+    height: 6px;
+    border: solid var(--white);
+    border-width: 0 1px 1px 0;
+    transform: rotate(45deg);
+}
+
+.descriptionTask {
+    width: 100%;
+    text-align: justify;
+    margin: auto;
+    font-size: 87.5%;
+    color: var(--white);
+}
+
+.taskIsCompleted {
+    width: 100%;
+    text-align: justify;
+    margin: auto;
+    font-size: 87.5%;
+    text-decoration: line-through;
+}
+
+.contentTask button {
+    margin: 1rem;
+    padding: 2px;
+    background: transparent;
+    border: 0;
+    color: var(--gray-300);
+    cursor: pointer;
+    line-height: 0;
+    border-radius: 4px;
+}
+
+.contentTask button:hover {
+    color: var(--danger);
+    background: var(--gray-400);
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 87.5%;
+    }
+
+    .contentTask,
+    .tasks header {
+        width: 90%;
+    }
+
+    .tasks main {}
+
+}
